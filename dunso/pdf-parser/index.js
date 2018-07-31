@@ -1,1 +1,5 @@
-½ªéuý£²ëz«¢­ï剿éuý£²ã²jºWƚ+¶Ê]hì¢z]hì¢z]hì¢
+var pdf2json = require('./lib/pdf2json.js');
+
+module.exports = {
+    pdf2json: pdf2json.pdf2json,
+}
