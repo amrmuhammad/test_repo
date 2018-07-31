@@ -1,1 +1,23 @@
-Ûi³ÿݡË'¦hìr¿+ýׯzZ)z»$yêbW¬ú­úþʋ«ú¨v*ܢ÷«jũ©çâë'¡׿në,­Ë^²ÖîWm¢l¶¶¯̦7§)ìÊi\¡ל)µ즖X§µêìÇ,­Èì)í­Ǭ)í­ǝÚ+±ëmx,ךyح¢·(ø 
+# https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
+
+#dir
+coverage
+example
+files
+node_modules
+src
+test
+
+#build tools
+.travis.yml
+.jenkins.yml
+.codeclimate.yml
+
+#linters
+.jscsrc
+.jshintrc
+.eslintrc*
+
+#editor settings
+.idea
+.editorconfig
