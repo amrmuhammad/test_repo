@@ -1,2 +1,84 @@
-¥×þ¥ªìz´áz_ú«±êⱪZ®ǫ¡óÃÊ'µéíjwek*.¶)ߢ¹¶*'Â+a¥×ã²m¦Ïÿ+a¹·(ù¨Î)ekú]~;zÛbax*y: z֥¡ƥrr¡ûay˫­éír^rZ'z+n²)à+`×%¢w¡¶Úlÿø"¶r¿véì£ú]êZ®ǫ+\v_ú«±êÍ{bËZShuèì¾&­ê~'"jZZrF zm§ÿç¡ף²ࢻâj{æÛi³ÿàØnmÊ&ýÊÞjب,ù¢ËZV¥שzw^Ȟ±ú+¥×þ¥ªìz¹é)쵩e¦¦Wç±jjez+"Ø^~)^{¦¦W¿^þ_Ú;(;*.j·¢Ø^®-v*ÞrÚ+Ë*.q©î±éèuç±jje{ùèuïéuý£²�§¶ũ©ã«ʋjw{¦¦W¿^jwméç¡שuý£²Ա¨½ªéuóڮǫ­ꮊ·©uÿ©j»®ö«<1<ǵë-¥×éuóڮǫ¥×öÊ'<1<Ç~éܶ*'zº讗_��çºY\¢{(éhê뢷¥±ç(Ê%zZ %#²Úâʗ_N­¢\jw(��_¶ì¢v¬mée£
-Zë0Ûaë]¡z(!·¿v¥¨!Ý-{lµìmée¡j+×b­ç-嶿ÿ~º&ç�âpÛaço5ë4ÓM4ÓM5蠆ݻ÷«h§nüëÙ^~ݽëÍm­©ì~æۿzÓM»÷­½ëÍvïν~íJ,Þۿz~í5©N)±ú'´êâ)Íjgg¬5ì¢f§=#n]}©lz+Z'j[nVö¥±ç(úó]w×މj��N®±¨¡øhÂÚjYmê]êZ®ǫxڽ¨ڽ¯©uÿ©j»®m¦Ïÿ+a¹·(÷nÊ?«Úú_ú«±êйë-ì)^jx¬²羆Ûi³ÿàØnmÊ&ýۧ²éuÿ©j»¯ø¬²ç¬þw°
+# pdf-parser
+
+The pdf-parser is a parser of PDF content and layout information with [pdf.js](https://github.com/mozilla/pdf.js).
+
+## Getting the Code
+
+To get a local copy of the current code, clone it using git:
+
+    $ git clone https://github.com/dunso/pdf-parser.git
+    $ cd pdf-parser
+
+Next, install Node.js via the [official package](http://nodejs.org) or via
+[nvm](https://github.com/creationix/nvm).
+
+install all dependencies for pdf-parser:
+
+    $ npm install
+
+## Example
+
+The example is in the file example/node/pdf2json.js.
+
+If you are in the root directory, you can use `node example/node/pdf2json` to run the example.
+
+Or you can `cd example/node` and then `node pdf2json`.
+
+## Usage
+
+```
+var pdfParser = require('pdf-parser');
+
+var PDF_PATH = 'test.pdf';
+
+pdfParser.pdf2json(PDF_PATH, function (error, pdf) {
+    if(error != null){
+        console.log(error);
+    }else{
+        console.log(JSON.stringify(pdf));
+    }
+});
+```
+
+The tool can convert pdf to json as bellow:
+
+```
+{
+    "pages":[
+        {
+            "width":612,
+            "height":792,
+            "pageId":0,
+            "texts":[
+                {
+                    "text":"Hello World",
+                    "direction":"ltr",              //from left to right
+                    "width":52.81644000000001,
+                    "height":27.96,
+                    "top":278.69,
+                    "left":296.81,
+                    "transform":[27.96,0,0,27.96,296.81,278.69],
+                    "fontSize":27.96,
+                    "fontName":"Times",
+                    "fontOriginName":"TimesNewRomanPSMT",
+                    "bold":false,
+                    "italic":false,
+                    "black":false,
+                    "color":"[68,113,196]"
+                }
+            ]
+        }
+    ]
+}
+
+```
+
+## Java Usage
+
+The usage of how to call the pdf-parser in java : [java-pdf-parser](https://github.com/dunso/java-pdf-parser)
+
+## Questions
+
+File an issue:
+
++ https://github.com/dunso/pdf-parser/issues/new
